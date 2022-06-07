@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form for add post</title>
+            <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body {
+            background: #ada1b5;
+            {#background: linear-gradient(to right, #90799c, #0b0112);#}
+        }
+        .no-gutters {
+            background: #e0dce3;
+            border-radius: 5px;
+            box-shadow: #7d7d7d;
+        }
+    </style>
+</head>
+<body>
+
+<section class="Form my-4 mx-5">
+    <div class="container">
+        <div class="row no-gutters">
+            <h3 style=" text-shadow: 2px 2px 2px black;">Add post</h3>
+                <form action="" method="POST" enctype="multipart/form-data" style="padding-bottom: 20px">
+                    {% csrf_token %}
+                        {{form.as_p}}
+                    <button type="submit" style="background: #ab97ba"><b>Submit</b></button>
+                </form>
+        </div>
+    </div>
+</section>
+</body>
+</html>
